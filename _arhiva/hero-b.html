@@ -1,0 +1,105 @@
+<!--
+  ARHIVA: hero varijanta B (odbačena 2026-10-04 u korist varijante C, sačuvana za slučaj povratka)
+  Izgled: tekst levo (eyebrow „Čačak · fizikalna medicina i rehabilitacija“, H1 u dva reda sa drugim
+  redom u plavom kurzivu, lead, crna pilula „Zakažite pregled“ sa strelicom u belom krugu).
+  Desno velika fotografija (4:3.3, radius 6px) i bela kartica sa 2 broja (20+ godina iskustva,
+  15.000+ pacijenata) koja preklapa donji deo slike, centrirana (left/right 15%).
+  Vraćanje: zameniti <section class="hero-c"> ovim markupom, a CSS ispod dodati u styles.css.
+  Oslanja se na postojeće tokene iz styles.css (--ink, --blue, --line, .ph, .reveal, .container).
+-->
+
+  <!-- ============ HERO - varijanta B: slika + kartica sa brojevima ============ -->
+  <section class="hero-b" data-hero="b">
+    <div class="container hero-b__grid">
+      <div class="hero-b__copy reveal">
+        <p class="hero-b__eyebrow">Čačak · fizikalna medicina i rehabilitacija</p>
+        <h1 class="hero-b__title">Vratite telu<br><em>lakoću pokreta.</em></h1>
+        <p class="hero-b__lead">
+          Specijalistički pregled, fizikalne terapije i vođeno vežbanje na jednom mestu.
+          Više od dve decenije pomažemo pacijentima u Čačku da se oporave - i da ostanu zdravi.
+        </p>
+        <a class="btn-pill" href="#kontakt">
+          <span>Zakažite pregled</span>
+          <span class="btn-pill__icon" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="hero-b__visual reveal">
+        <div class="ph hero-b__photo" data-label="Fotografija: doktor sa pacijentom tokom pregleda"></div>
+        <dl class="hero-b__stats">
+          <div><dd>20+</dd><dt>Godina iskustva</dt></div>
+          <div><dd>15.000+</dd><dt>Zadovoljnih pacijenata</dt></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+<style>
+/* ---------- zajedničko za hero varijante B i C ---------- */
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 18px;
+  padding: 7px 7px 7px 26px;
+  border-radius: 999px;
+  background: var(--ink); color: var(--white);
+  font-weight: 600; font-size: .98rem; text-decoration: none;
+  transition: background-color .2s;
+}
+.btn-pill__icon {
+  display: grid; place-items: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--white); color: var(--ink);
+  font-size: 1.05rem;
+  transition: transform .25s ease;
+}
+.btn-pill:hover { background: var(--blue-deep); }
+.btn-pill:hover .btn-pill__icon { transform: translateX(3px); }
+.btn-pill--light { background: var(--white); color: var(--ink); }
+.btn-pill--light .btn-pill__icon { background: var(--blue); color: var(--white); }
+.btn-pill--light:hover { background: var(--paper); }
+
+/* =========================================================
+   HERO B — tekst levo, velika slika desno, kartica sa brojevima preko slike
+   ========================================================= */
+.hero-b { padding-block: clamp(40px, 6vw, 80px) clamp(64px, 8vw, 112px); }
+.hero-b__grid {
+  display: grid; grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(40px, 5vw, 72px); align-items: center;
+}
+.hero-b__eyebrow {
+  font-size: .8rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--ink-3); margin-bottom: 28px;
+}
+.hero-b__title {
+  font-size: clamp(3rem, 6.6vw, 5.8rem);
+  font-weight: 500; line-height: .98; letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+.hero-b__title em { font-style: italic; font-weight: 400; color: var(--blue); }
+.hero-b__lead { font-size: clamp(1.05rem, 1.3vw, 1.18rem); color: var(--ink-2); max-width: 32em; margin-bottom: 44px; }
+
+.hero-b__visual { position: relative; padding-bottom: 48px; }
+.hero-b__photo { aspect-ratio: 4 / 3.3; border-radius: 6px; }
+.hero-b__photo::after { top: 16px; bottom: auto; }
+.hero-b__stats {
+  position: absolute; left: 15%; right: 15%; bottom: 0;  /* centrirano u odnosu na sliku */
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  margin: 0; padding: 26px 16px;
+  background: var(--white); border-radius: 14px;
+  box-shadow: 0 20px 50px -18px rgba(27,29,33,.28);
+}
+.hero-b__stats div { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.hero-b__stats div + div { border-left: 1px solid var(--line); }
+.hero-b__stats dd { margin: 0; font-family: var(--serif); font-size: clamp(1.7rem, 2.6vw, 2.3rem); line-height: 1; letter-spacing: -0.02em; }
+.hero-b__stats dt { font-size: .8rem; font-weight: 600; color: var(--ink-3); }
+
+@media (max-width: 880px) {
+  .hero-b__grid { grid-template-columns: 1fr; }
+  .hero-b__stats { left: 16px; right: 16px; }
+}
+@media (max-width: 480px) {
+  .hero-b__stats { padding: 18px 8px; }
+  .hero-b__stats dt { font-size: .72rem; }
+  .hero-b__stats dd { font-size: 1.45rem; }
+}
+
+</style>

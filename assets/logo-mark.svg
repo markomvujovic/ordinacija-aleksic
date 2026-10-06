@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ordinacija Aleksić">
+  <defs>
+    <mask id="hand">
+      <rect width="120" height="120" fill="#fff"/>
+      <!-- dlan koji izlazi desno iz kruga -->
+      <path d="M104 22 C86 28 70 40 62 54 C58 61 61 67 69 69 C65 63 69 59 75 62 C81 65 78 72 69 75 C84 78 98 76 106 70 L120 70 L120 10 Z" fill="#000"/>
+      <!-- prsti -->
+      <g stroke="#000" stroke-linecap="round" fill="none">
+        <path d="M32 38 Q50 31 72 28" stroke-width="3.2"/>
+        <path d="M24 50 Q44 42 70 38" stroke-width="3.4"/>
+        <path d="M23 61 Q42 53 66 49" stroke-width="3.4"/>
+        <path d="M28 72 Q44 65 62 61" stroke-width="3.2"/>
+      </g>
+    </mask>
+  </defs>
+  <circle cx="58" cy="54" r="44" fill="#C4161C" mask="url(#hand)"/>
+  <rect x="17.5" y="104.5" width="85" height="9" fill="none" stroke="#C4161C" stroke-width="3"/>
+</svg>
