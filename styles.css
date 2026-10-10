@@ -829,6 +829,13 @@ html.lb-open { overflow: hidden; }
 .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
 .js .reveal.is-visible { opacity: 1; transform: none; }
 .js .hero-c__cards.reveal { transition-delay: .12s; }
+/* tim: portreti u istoj ravni zajedno - prvo 1. i 3., pa 2. i 4. */
+.js .member.reveal:nth-child(even) { transition-delay: .15s; }
+/* galerija: s leva na desno; u desnoj koloni gornja pa donja slika; donji red posebno */
+.js .shot--tall.reveal { transition-delay: .1s; }
+.js .shot--sq.reveal { transition-delay: .2s; }
+.js .shot--sq.reveal + .shot--sq.reveal { transition-delay: .3s; }
+.js .shot--wide.reveal + .shot--wide.reveal { transition-delay: .1s; }
 
 @media (prefers-reduced-motion: reduce) {
   .js .reveal { opacity: 1; transform: none; transition: none; }

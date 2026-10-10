@@ -141,10 +141,11 @@ updateActiveFromScroll();
 /* ---------- Pojavljivanje pri skrolu ---------- */
 const reveal = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      reveal.unobserve(entry.target);
-    }
+    if (!entry.isIntersecting) return;
+    // elementi iste grupe (tim, redovi galerije) kreću zajedno, a redosled daje transition-delay u CSS-u
+    const group = entry.target.dataset.revealGroup;
+    const targets = group ? document.querySelectorAll(`[data-reveal-group="${group}"]`) : [entry.target];
+    targets.forEach((el) => { el.classList.add('is-visible'); reveal.unobserve(el); });
   });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach((el) => reveal.observe(el));
