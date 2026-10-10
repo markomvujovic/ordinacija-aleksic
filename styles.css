@@ -460,7 +460,7 @@ h3 { font-family: var(--serif); font-size: 1.6rem; line-height: 1.15; letter-spa
   display: grid; grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 6vw, 96px); align-items: center;
 }
-.pilates h2 { color: var(--white); margin-bottom: 24px; font-size: clamp(2rem, 4vw, 3.1rem); }
+.pilates h2 { color: var(--white); margin-bottom: 24px; }
 .pilates__copy > p:not(.eyebrow) { color: rgba(233,238,234,.78); font-size: 1.08rem; }
 
 .pilates__facts {
@@ -644,7 +644,7 @@ h3 { font-family: var(--serif); font-size: 1.6rem; line-height: 1.15; letter-spa
    ZAŠTO MI — 4 razloga u redu, ikonica + naslov + tekst, bez kartica
    ========================================================= */
 .why { background: var(--white); padding-block: clamp(56px, 7vw, 96px); margin-top: clamp(56px, 7vw, 88px); }
-.why__title { font-size: clamp(1.7rem, 2.8vw, 2.3rem); margin-bottom: clamp(32px, 4vw, 48px); }
+.why__title { margin-bottom: clamp(32px, 4vw, 48px); }
 .why__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
 .why__item { padding: 4px clamp(20px, 2.4vw, 32px); border-left: 1px solid var(--line); }
 .why__item:first-child { padding-left: 0; border-left: 0; }
