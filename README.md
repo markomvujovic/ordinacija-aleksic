@@ -47,6 +47,15 @@ Neki podaci su privremeni i treba ih potvrditi sa ordinacijom:
 - broj pacijenata (15.000+) i godine rada (20+),
 - odgovori u sekciji „Najčešća pitanja“ (uput, plaćanje karticom, trajanje terapija),
 - spisak terapija u sekciji „Usluge“,
-- veličina grupe i trajanje časa pilatesa (do 6 polaznika, 55 min).
+- veličina grupe i trajanje časa pilatesa (do 6 polaznika, 55 min),
+- **tim** (sekcija „O ordinaciji“): imena, zvanja i fotografije - sada su „Ime Prezime“ i mesta za slike,
+- **utisci pacijenata**: sadašnji tekstovi su primeri i moraju se zameniti stvarnim utiscima, uz saglasnost pacijenata,
+- **galerija**: 6 mesta za fotografije prostora.
+
+### Zamena mesta za slike
+
+Mesta za slike su `<div class="ph" data-label="...">`. Zamenite ih sa `<img src="assets/ime.webp" alt="opis">`
+(u galeriji unutar `<figure class="shot ...">`, kod tima sa klasom `member__photo`).
+Preporuka: `.webp`, širina do 1600px (galerija) odnosno 800px (portreti, format 4:5).
 
 Ikonice usluga: [Lucide](https://lucide.dev) (ISC licenca).

@@ -19,6 +19,10 @@
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><!-- Lucide: star --><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+</svg>
+
 <a class="skip-link" href="#main">Preskoči na sadržaj</a>
 
 <!-- ============ NAVIGACIJA ============ -->
@@ -34,7 +38,9 @@
 
     <nav class="nav__links" aria-label="Glavna navigacija">
       <a href="#usluge">Usluge</a>
+      <a href="#o-nama">O nama</a>
       <a href="#pilates">Pilates</a>
+      <a href="#galerija">Galerija</a>
       <a href="#pitanja">Pitanja</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -51,7 +57,9 @@
 
   <div class="mobile-menu" id="mobile-menu" hidden>
     <a href="#usluge">Usluge</a>
+    <a href="#o-nama">O nama</a>
     <a href="#pilates">Pilates</a>
+    <a href="#galerija">Galerija</a>
     <a href="#pitanja">Pitanja</a>
     <a href="#kontakt">Kontakt</a>
     <a class="btn btn--primary" href="tel:+38132371926">Pozovite 032 371 926</a>
@@ -100,6 +108,35 @@
       </div>
     </div>
   </div>
+  </section>
+
+  <!-- ============ ZAŠTO MI ============ -->
+  <section class="why" aria-labelledby="why-title">
+    <div class="container">
+      <h2 class="why__title reveal" id="why-title">Zašto pacijenti biraju nas</h2>
+      <ul class="why__list">
+        <li class="why__item reveal">
+          <svg class="why__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><!-- Lucide: user-round-check --><path d="M2 21a8 8 0 0 1 13.292-6"/> <circle cx="10" cy="8" r="5"/> <path d="m16 19 2 2 4-4"/></svg>
+          <h3>Specijalista od prvog dana</h3>
+          <p>Pregled, plan terapije i kontrole vodi lekar specijalista fizikalne medicine - ne samo na početku, već do kraja oporavka.</p>
+        </li>
+        <li class="why__item reveal">
+          <svg class="why__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><!-- Lucide: clipboard-list --><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/> <path d="M12 11h4"/> <path d="M12 16h4"/> <path d="M8 11h.01"/> <path d="M8 16h.01"/></svg>
+          <h3>Plan samo za vas</h3>
+          <p>Nema šablona. Terapije i vežbe biramo prema vašem nalazu, uzrastu, svakodnevici i cilju koji želite da postignete.</p>
+        </li>
+        <li class="why__item reveal">
+          <svg class="why__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><!-- Lucide: layers --><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+          <h3>Sve na jednom mestu</h3>
+          <p>Dijagnoza, fizikalne procedure, vođeno vežbanje i masaža pod istim krovom - bez lutanja od adrese do adrese.</p>
+        </li>
+        <li class="why__item reveal">
+          <svg class="why__icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><!-- Lucide: calendar-clock --><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"/> <path d="M16 2v4"/> <path d="M8 2v4"/> <path d="M3 10h5"/> <path d="M17.5 17.5 16 16.3V14"/> <circle cx="16" cy="16" r="6"/></svg>
+          <h3>Termini koji vam odgovaraju</h3>
+          <p>Radimo radnim danima do 20 h i subotom, pa terapiju lako uklopite pre ili posle posla.</p>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- ============ USLUGE ============ -->
@@ -192,6 +229,42 @@
     </div>
   </section>
 
+  <!-- ============ O NAMA / TIM ============ -->
+  <section class="about section" id="o-nama">
+    <div class="container">
+      <div class="about__intro">
+        <div class="reveal">
+          <p class="eyebrow">O ordinaciji</p>
+          <h2>Više od dve decenije brinemo o tome da se Čačani kreću bez bola.</h2>
+        </div>
+        <p class="about__text reveal">Ordinacija Aleksić je privatna ordinacija fizikalne medicine i rehabilitacije u kojoj lekari i fizioterapeuti rade kao jedan tim. Svakom pacijentu posvećujemo vreme, objašnjavamo svaki korak terapije i pratimo napredak sve dok se ne vratite aktivnostima koje volite.</p>
+      </div>
+
+      <ul class="team" aria-label="Naš tim">
+        <li class="member reveal">
+          <img class="member__photo" src="assets/tim-1-lekar.webp" width="1122" height="1402" alt="Lekarka specijalista u belom mantilu" loading="lazy">
+          <h3 class="member__name">dr Ime Prezime</h3>
+          <p class="member__role">Specijalista fizikalne medicine i rehabilitacije</p>
+        </li>
+        <li class="member reveal">
+          <img class="member__photo" src="assets/tim-2-lekar.webp" width="1122" height="1402" alt="Lekar specijalista u radnoj uniformi" loading="lazy">
+          <h3 class="member__name">dr Ime Prezime</h3>
+          <p class="member__role">Specijalista fizikalne medicine i rehabilitacije</p>
+        </li>
+        <li class="member reveal">
+          <img class="member__photo" src="assets/tim-3-fizioterapeut.webp" width="1122" height="1402" alt="Fizioterapeutkinja u sali za terapije" loading="lazy">
+          <h3 class="member__name">Ime Prezime</h3>
+          <p class="member__role">Viši fizioterapeut</p>
+        </li>
+        <li class="member reveal">
+          <img class="member__photo" src="assets/tim-4-fizioterapeut.webp" width="1122" height="1402" alt="Fizioterapeutkinja pored stola za terapiju" loading="lazy">
+          <h3 class="member__name">Ime Prezime</h3>
+          <p class="member__role">Fizioterapeut, instruktor pilatesa</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- ============ PILATES ============ -->
   <section class="pilates section" id="pilates">
     <div class="container pilates__grid">
@@ -229,6 +302,57 @@
         </ol>
         <p class="timetable__foot">Časove vodi fizioterapeut koji prati da li vežbe radite pravilno i prilagođava ih vašem stanju.</p>
         <a class="btn btn--light btn--lg timetable__cta" href="#kontakt">Prijavite se za probni čas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERIJA ============ -->
+  <section class="gallery section" id="galerija">
+    <div class="container">
+      <header class="gallery__head reveal">
+        <div>
+          <p class="eyebrow">Galerija</p>
+          <h2>Prostor u kome se oporavlja</h2>
+        </div>
+        <p>Svetle, prozračne sale, savremena oprema i mirna čekaonica - pogledajte gde vas čekamo.</p>
+      </header>
+      <div class="gallery__grid">
+        <figure class="shot shot--big reveal"><button type="button" class="shot__btn" data-lightbox aria-label="Uvećaj sliku: Sala za fizikalnu terapiju sa stolom, aparatom i rekvizitima za vežbanje"><img src="assets/galerija-1-sala-terapije.webp" width="1122" height="1402" alt="Sala za fizikalnu terapiju sa stolom, aparatom i rekvizitima za vežbanje" loading="lazy" style="object-position: 50% 60%"></button></figure>
+        <figure class="shot shot--tall reveal"><button type="button" class="shot__btn" data-lightbox aria-label="Uvećaj sliku: Sala za vežbanje i pilates sa prostirkama i loptama"><img src="assets/galerija-2-sala-vezbe.webp" width="1122" height="1402" alt="Sala za vežbanje i pilates sa prostirkama i loptama" loading="lazy" style="object-position: 40% 50%"></button></figure>
+        <figure class="shot shot--sq reveal"><button type="button" class="shot__btn" data-lightbox aria-label="Uvećaj sliku: Prijem ordinacije"><img src="assets/galerija-3-prijem.webp" width="1122" height="1402" alt="Prijem ordinacije" loading="lazy" style="object-position: 70% 55%"></button></figure>
+        <figure class="shot shot--sq reveal"><button type="button" class="shot__btn" data-lightbox aria-label="Uvećaj sliku: Aparat za elektroterapiju"><img src="assets/galerija-4-aparati.webp" width="1122" height="1402" alt="Aparat za elektroterapiju" loading="lazy" style="object-position: 40% 45%"></button></figure>
+        <figure class="shot shot--wide reveal"><button type="button" class="shot__btn" data-lightbox aria-label="Uvećaj sliku: Svetla čekaonica sa foteljama"><img src="assets/galerija-5-cekaonica.webp" width="1122" height="1402" alt="Svetla čekaonica sa foteljama" loading="lazy" style="object-position: 50% 55%"></button></figure>
+        <figure class="shot shot--wide reveal"><button type="button" class="shot__btn" data-lightbox aria-label="Uvećaj sliku: Kabinet za masažu"><img src="assets/galerija-6-masaza.webp" width="1122" height="1402" alt="Kabinet za masažu" loading="lazy" style="object-position: 50% 62%"></button></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UTISCI ============ -->
+  <section class="testimonials section" id="utisci" aria-labelledby="testi-title">
+    <div class="container">
+      <p class="eyebrow reveal">Utisci pacijenata</p>
+      <h2 class="sr-only" id="testi-title">Utisci pacijenata</h2>
+      <figure class="quote quote--featured reveal">
+        <span class="stars" role="img" aria-label="Ocena 5 od 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+        <blockquote><p>„Posle operacije kolena mislila sam da se nikad neću vratiti planinarenju. Za tri meseca terapije i vežbi ovde ponovo sam na stazi - i bez bola.“</p></blockquote>
+        <figcaption><strong>Milena J.</strong><span>Rehabilitacija posle operacije kolena</span></figcaption>
+      </figure>
+      <div class="quotes">
+        <figure class="quote reveal">
+          <span class="stars" role="img" aria-label="Ocena 5 od 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote><p>„Doktor je odvojio vreme da mi objasni odakle bol u leđima dolazi. Prvi put mi je neko dao plan, a ne samo uput.“</p></blockquote>
+          <figcaption><strong>Dragan P.</strong><span>Hronični bol u donjem delu leđa</span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <span class="stars" role="img" aria-label="Ocena 5 od 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote><p>„Ćerka je imala loše držanje. Posle korektivnih vežbi i saveta za kuću razlika se vidi golim okom.“</p></blockquote>
+          <figcaption><strong>Jelena M.</strong><span>Korektivne vežbe za decu</span></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <span class="stars" role="img" aria-label="Ocena 5 od 5"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+          <blockquote><p>„Pilates u maloj grupi je pun pogodak. Terapeut ispravi svaki pokret, a vrat više ne boli posle posla.“</p></blockquote>
+          <figcaption><strong>Nikola S.</strong><span>Pilates</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -350,7 +474,10 @@
     <nav class="footer__col" aria-label="Navigacija u futeru">
       <h4>Ordinacija</h4>
       <a href="#usluge">Usluge</a>
+      <a href="#o-nama">O nama i tim</a>
       <a href="#pilates">Pilates i termini</a>
+      <a href="#galerija">Galerija</a>
+      <a href="#utisci">Utisci pacijenata</a>
       <a href="#pitanja">Najčešća pitanja</a>
       <a href="#kontakt">Kontakt i radno vreme</a>
     </nav>
@@ -379,6 +506,17 @@
     <a href="#top">Nazad na vrh ↑</a>
   </div>
 </footer>
+
+<!-- ============ LIGHTBOX GALERIJE ============ -->
+<dialog class="lightbox" aria-label="Galerija - uvećan prikaz">
+  <button type="button" class="lightbox__btn lightbox__close" data-lb-close aria-label="Zatvori (Esc)"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  <button type="button" class="lightbox__btn lightbox__prev" data-lb-prev aria-label="Prethodna slika"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" src="" alt="">
+    <figcaption class="lightbox__caption"><span data-lb-caption></span><span class="lightbox__count" data-lb-count></span></figcaption>
+  </figure>
+  <button type="button" class="lightbox__btn lightbox__next" data-lb-next aria-label="Sledeća slika"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+</dialog>
 
 <script src="script.js"></script>
 </body>

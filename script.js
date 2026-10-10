@@ -85,7 +85,9 @@ document.querySelectorAll(`[data-day="${today}"]`).forEach((el) => el.classList.
 
 /* ---------- Aktivan link u navigaciji ---------- */
 const navLinks = [...document.querySelectorAll('.nav__links a')];
-const sections = navLinks.map((a) => document.querySelector(a.getAttribute('href')));
+// sve sekcije sa id-jem, redom kao na stranici - i one bez linka u navigaciji (npr. Utisci),
+// da dok ste u njima ne ostane istaknut link prethodne sekcije
+const spySections = [...document.querySelectorAll('main section[id]')];
 
 function setActive(id) {
   navLinks.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`));
@@ -123,8 +125,8 @@ function updateActiveFromScroll() {
   const line = window.innerHeight * 0.45;
   const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
   let current = null;
-  sections.forEach((s) => { if (s && s.getBoundingClientRect().top <= line) current = s.id; });
-  if (atBottom && sections.length) current = sections[sections.length - 1].id;
+  spySections.forEach((s) => { if (s.getBoundingClientRect().top <= line) current = s.id; });
+  if (atBottom && spySections.length) current = spySections[spySections.length - 1].id;
   setActive(current);
 }
 
@@ -184,3 +186,63 @@ faqItems.forEach((item) => {
     setQa(item, open);
   });
 });
+
+/* ---------- Galerija: uvećan prikaz (lightbox) ---------- */
+const lightbox = document.querySelector('.lightbox');
+if (lightbox) {
+  const shots = [...document.querySelectorAll('[data-lightbox] img')];
+  const lbImg = lightbox.querySelector('.lightbox__img');
+  const lbCaption = lightbox.querySelector('[data-lb-caption]');
+  const lbCount = lightbox.querySelector('[data-lb-count]');
+  let current = 0;
+  let opener = null;
+
+  function show(i) {
+    current = (i + shots.length) % shots.length;   // u krug: posle poslednje ide prva
+    const src = shots[current];
+    lbImg.classList.add('is-loading');
+    lbImg.onload = () => lbImg.classList.remove('is-loading');
+    lbImg.src = src.currentSrc || src.src;
+    lbImg.alt = src.alt;
+    lbCaption.textContent = src.alt;
+    lbCount.textContent = `${current + 1} / ${shots.length}`;
+  }
+
+  function open(i, btn) {
+    opener = btn;
+    show(i);
+    document.documentElement.classList.add('lb-open');
+    lightbox.showModal();
+    lightbox.querySelector('[data-lb-next]').focus();
+  }
+
+  shots.forEach((img, i) => img.closest('[data-lightbox]').addEventListener('click', (e) => open(i, e.currentTarget)));
+  lightbox.querySelector('[data-lb-prev]').addEventListener('click', () => show(current - 1));
+  lightbox.querySelector('[data-lb-next]').addEventListener('click', () => show(current + 1));
+  lightbox.querySelector('[data-lb-close]').addEventListener('click', () => lightbox.close());
+
+  // klik na zatamnjeni deo (van slike i dugmadi) zatvara prikaz
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('lightbox__figure')) lightbox.close();
+  });
+
+  lightbox.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1); }
+  });   // Esc zatvara <dialog> sam
+
+  // prevlačenje prstom na telefonu
+  let touchX = null;
+  lightbox.addEventListener('touchstart', (e) => { touchX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend', (e) => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+    touchX = null;
+  });
+
+  lightbox.addEventListener('close', () => {
+    document.documentElement.classList.remove('lb-open');
+    opener?.focus({ preventScroll: true });
+  });
+}
